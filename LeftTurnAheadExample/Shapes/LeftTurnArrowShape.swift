@@ -18,13 +18,13 @@ struct LeftTurnArrowShape: Shape {
 //        path.addLine(to: CGPoint(x: w * 0.9, y: h * 0.7))
 //        path.addLine(to: CGPoint(x: w * 0.8, y: h * 0.7))
 //        path.addLine(to: CGPoint(x: w * 0.8, y: h * 0.35))
-        path.move(to: CGPoint(x: w * 0.7, y: h * 0.4))
-        path.addLine(to: CGPoint(x: w * 0.7, y: h * 0.9))
-        path.addLine(to: CGPoint(x: w * 0.9, y: h * 0.9))
-        path.addLine(to: CGPoint(x: w * 0.9, y: h * 0.4))
+        path.move(to: CGPoint(x: w * 0.8, y: h * 0.4))
+        path.addLine(to: CGPoint(x: w * 0.8, y: h * 1.0))
+        path.addLine(to: CGPoint(x: w * 1.0, y: h * 1.0))
+        path.addLine(to: CGPoint(x: w * 1.0, y: h * 0.4))
         
         // Add left-turn curve hook
-        path.addArc(center: CGPoint(x: w * 0.7, y: h * 0.4),
+        path.addArc(center: CGPoint(x: w * 0.8, y: h * 0.4),
                     radius: w * 0.2,
                     startAngle: .degrees(0),
                     endAngle: .degrees(-90),
