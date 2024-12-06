@@ -13,6 +13,7 @@
 		81F53E412D037FB7004B9CC2 /* LeftTurnAheadExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F53E3C2D037FB7004B9CC2 /* LeftTurnAheadExampleApp.swift */; };
 		81F53E442D037FC5004B9CC2 /* DiamondShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F53E432D037FC1004B9CC2 /* DiamondShape.swift */; };
 		81F53E462D037FD3004B9CC2 /* LeftTurnArrowShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F53E452D037FCE004B9CC2 /* LeftTurnArrowShape.swift */; };
+		81F53E492D0380A2004B9CC2 /* RoadSignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F53E482D038097004B9CC2 /* RoadSignView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		81F53E3C2D037FB7004B9CC2 /* LeftTurnAheadExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTurnAheadExampleApp.swift; sourceTree = "<group>"; };
 		81F53E432D037FC1004B9CC2 /* DiamondShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiamondShape.swift; sourceTree = "<group>"; };
 		81F53E452D037FCE004B9CC2 /* LeftTurnArrowShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTurnArrowShape.swift; sourceTree = "<group>"; };
+		81F53E482D038097004B9CC2 /* RoadSignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadSignView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 			children = (
 				81F53E3C2D037FB7004B9CC2 /* LeftTurnAheadExampleApp.swift */,
 				81F53E422D037FB9004B9CC2 /* Shapes */,
+				81F53E472D038090004B9CC2 /* Views */,
 				81F53E392D037FB7004B9CC2 /* Preview Content */,
 				81F53E3A2D037FB7004B9CC2 /* Assets.xcassets */,
 				81F53E3B2D037FB7004B9CC2 /* ContentView.swift */,
@@ -79,6 +82,14 @@
 				81F53E432D037FC1004B9CC2 /* DiamondShape.swift */,
 			);
 			path = Shapes;
+			sourceTree = "<group>";
+		};
+		81F53E472D038090004B9CC2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				81F53E482D038097004B9CC2 /* RoadSignView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81F53E492D0380A2004B9CC2 /* RoadSignView.swift in Sources */,
 				81F53E442D037FC5004B9CC2 /* DiamondShape.swift in Sources */,
 				81F53E402D037FB7004B9CC2 /* ContentView.swift in Sources */,
 				81F53E412D037FB7004B9CC2 /* LeftTurnAheadExampleApp.swift in Sources */,
