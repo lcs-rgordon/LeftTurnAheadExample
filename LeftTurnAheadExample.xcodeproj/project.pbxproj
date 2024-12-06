@@ -63,11 +63,11 @@
 		81F53E3D2D037FB7004B9CC2 /* LeftTurnAheadExample */ = {
 			isa = PBXGroup;
 			children = (
+				81F53E3C2D037FB7004B9CC2 /* LeftTurnAheadExampleApp.swift */,
 				81F53E422D037FB9004B9CC2 /* Shapes */,
 				81F53E392D037FB7004B9CC2 /* Preview Content */,
 				81F53E3A2D037FB7004B9CC2 /* Assets.xcassets */,
 				81F53E3B2D037FB7004B9CC2 /* ContentView.swift */,
-				81F53E3C2D037FB7004B9CC2 /* LeftTurnAheadExampleApp.swift */,
 			);
 			path = LeftTurnAheadExample;
 			sourceTree = "<group>";

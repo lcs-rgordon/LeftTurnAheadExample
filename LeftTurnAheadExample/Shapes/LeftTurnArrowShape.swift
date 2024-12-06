@@ -32,3 +32,7 @@ struct LeftTurnArrowShape: Shape {
         return path
     }
 }
+
+#Preview {
+    LeftTurnArrowShape()
+}

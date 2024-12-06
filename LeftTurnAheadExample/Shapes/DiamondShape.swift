@@ -22,3 +22,7 @@ struct DiamondShape: Shape {
         return path
     }
 }
+
+#Preview {
+    DiamondShape()
+}
