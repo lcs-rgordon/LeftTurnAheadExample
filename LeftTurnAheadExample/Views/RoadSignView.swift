@@ -17,7 +17,14 @@ struct RoadSignView: View {
                 .overlay(
                     GeometryReader { reader in
                         DiamondShape()
-                            .stroke(Color.black, lineWidth: reader.size.width * 0.01) // Black border
+                            .stroke(
+                                .black,
+                                style: StrokeStyle(
+                                    lineWidth: reader.size.width * 0.01,
+                                    lineCap: .round,
+                                    lineJoin: .round
+                                )
+                            )
                             .padding(reader.size.width * 0.02)
                             .overlay {
                                 // Left-turn arrow
