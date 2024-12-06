@@ -19,8 +19,8 @@ struct LeftTurnArrowShape: Shape {
 //        path.addLine(to: CGPoint(x: w * 0.8, y: h * 0.7))
 //        path.addLine(to: CGPoint(x: w * 0.8, y: h * 0.35))
         path.move(to: CGPoint(x: w * 0.7, y: h * 0.4))
-        path.addLine(to: CGPoint(x: w * 0.7, y: h * 0.7))
-        path.addLine(to: CGPoint(x: w * 0.9, y: h * 0.7))
+        path.addLine(to: CGPoint(x: w * 0.7, y: h * 0.9))
+        path.addLine(to: CGPoint(x: w * 0.9, y: h * 0.9))
         path.addLine(to: CGPoint(x: w * 0.9, y: h * 0.4))
         
         // Add left-turn curve hook
@@ -30,7 +30,12 @@ struct LeftTurnArrowShape: Shape {
                     endAngle: .degrees(-90),
                     clockwise: true)
         
-        //
+        // Continue left to arrowhead
+        path.addLine(to: CGPoint(x: w * 0.3, y: h * 0.2))
+        path.addLine(to: CGPoint(x: w * 0.3, y: h * 0.0))
+        path.addLine(to: CGPoint(x: w * 0.0, y: h * 0.3))
+        path.addLine(to: CGPoint(x: w * 0.3, y: h * 0.6))
+        path.addLine(to: CGPoint(x: w * 0.3, y: h * 0.4))
 
         
         //
@@ -54,4 +59,6 @@ struct LeftTurnArrowShape: Shape {
 
 #Preview {
     LeftTurnArrowShape()
+        .border(.red)
+        .aspectRatio(1.0, contentMode: .fit)
 }
