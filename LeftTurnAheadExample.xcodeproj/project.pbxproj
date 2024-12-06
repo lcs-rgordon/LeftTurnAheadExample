@@ -6,17 +6,24 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		81F53E3E2D037FB7004B9CC2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81F53E382D037FB7004B9CC2 /* Preview Assets.xcassets */; };
+		81F53E3F2D037FB7004B9CC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81F53E3A2D037FB7004B9CC2 /* Assets.xcassets */; };
+		81F53E402D037FB7004B9CC2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F53E3B2D037FB7004B9CC2 /* ContentView.swift */; };
+		81F53E412D037FB7004B9CC2 /* LeftTurnAheadExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F53E3C2D037FB7004B9CC2 /* LeftTurnAheadExampleApp.swift */; };
+		81F53E442D037FC5004B9CC2 /* DiamondShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F53E432D037FC1004B9CC2 /* DiamondShape.swift */; };
+		81F53E462D037FD3004B9CC2 /* LeftTurnArrowShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F53E452D037FCE004B9CC2 /* LeftTurnArrowShape.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		81F53E1D2D037FA2004B9CC2 /* LeftTurnAheadExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeftTurnAheadExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81F53E382D037FB7004B9CC2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		81F53E3A2D037FB7004B9CC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		81F53E3B2D037FB7004B9CC2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		81F53E3C2D037FB7004B9CC2 /* LeftTurnAheadExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTurnAheadExampleApp.swift; sourceTree = "<group>"; };
+		81F53E432D037FC1004B9CC2 /* DiamondShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiamondShape.swift; sourceTree = "<group>"; };
+		81F53E452D037FCE004B9CC2 /* LeftTurnArrowShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTurnArrowShape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		81F53E1F2D037FA2004B9CC2 /* LeftTurnAheadExample */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = LeftTurnAheadExample;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		81F53E1A2D037FA2004B9CC2 /* Frameworks */ = {
@@ -32,7 +39,7 @@
 		81F53E142D037FA2004B9CC2 = {
 			isa = PBXGroup;
 			children = (
-				81F53E1F2D037FA2004B9CC2 /* LeftTurnAheadExample */,
+				81F53E3D2D037FB7004B9CC2 /* LeftTurnAheadExample */,
 				81F53E1E2D037FA2004B9CC2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +50,35 @@
 				81F53E1D2D037FA2004B9CC2 /* LeftTurnAheadExample.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		81F53E392D037FB7004B9CC2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				81F53E382D037FB7004B9CC2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		81F53E3D2D037FB7004B9CC2 /* LeftTurnAheadExample */ = {
+			isa = PBXGroup;
+			children = (
+				81F53E422D037FB9004B9CC2 /* Shapes */,
+				81F53E392D037FB7004B9CC2 /* Preview Content */,
+				81F53E3A2D037FB7004B9CC2 /* Assets.xcassets */,
+				81F53E3B2D037FB7004B9CC2 /* ContentView.swift */,
+				81F53E3C2D037FB7004B9CC2 /* LeftTurnAheadExampleApp.swift */,
+			);
+			path = LeftTurnAheadExample;
+			sourceTree = "<group>";
+		};
+		81F53E422D037FB9004B9CC2 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				81F53E452D037FCE004B9CC2 /* LeftTurnArrowShape.swift */,
+				81F53E432D037FC1004B9CC2 /* DiamondShape.swift */,
+			);
+			path = Shapes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +95,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				81F53E1F2D037FA2004B9CC2 /* LeftTurnAheadExample */,
 			);
 			name = LeftTurnAheadExample;
 			packageProductDependencies = (
@@ -109,6 +142,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81F53E3E2D037FB7004B9CC2 /* Preview Assets.xcassets in Resources */,
+				81F53E3F2D037FB7004B9CC2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81F53E442D037FC5004B9CC2 /* DiamondShape.swift in Sources */,
+				81F53E402D037FB7004B9CC2 /* ContentView.swift in Sources */,
+				81F53E412D037FB7004B9CC2 /* LeftTurnAheadExampleApp.swift in Sources */,
+				81F53E462D037FD3004B9CC2 /* LeftTurnArrowShape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
