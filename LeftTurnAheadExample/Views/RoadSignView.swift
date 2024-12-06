@@ -21,7 +21,14 @@ struct RoadSignView: View {
             
             // Left-turn arrow
             LeftTurnArrowShape()
-                .stroke(Color.black, lineWidth: 8)
+                .stroke(
+                    .black,
+                    style: StrokeStyle(
+                        lineWidth: 8,
+                        lineCap: .round,
+                        lineJoin: .round
+                    )
+                )
                 .frame(width: 100, height: 100)
         }
     }
