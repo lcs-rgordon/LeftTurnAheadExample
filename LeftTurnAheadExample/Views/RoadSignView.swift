@@ -20,12 +20,12 @@ struct RoadSignView: View {
                             .stroke(
                                 .black,
                                 style: StrokeStyle(
-                                    lineWidth: reader.size.width * 0.01,
+                                    lineWidth: reader.size.width * 0.02,
                                     lineCap: .round,
                                     lineJoin: .round
                                 )
                             )
-                            .padding(reader.size.width * 0.02)
+                            .padding(reader.size.width * 0.04)
                             .overlay {
                                 // Left-turn arrow
                                 LeftTurnArrowShape()
@@ -37,9 +37,10 @@ struct RoadSignView: View {
                                             lineJoin: .round
                                         )
                                     )
+                                    .fill(.black)
                                     .frame(
-                                        width: reader.size.width * 0.45,
-                                        height: reader.size.width * 0.45
+                                        width: reader.size.width * 0.4,
+                                        height: reader.size.width * 0.4
                                     )
                                     .offset(x: reader.size.width * -0.05)
                             }
