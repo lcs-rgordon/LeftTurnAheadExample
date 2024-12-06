@@ -36,6 +36,7 @@ struct LeftTurnArrowShape: Shape {
         path.addLine(to: CGPoint(x: w * 0.0, y: h * 0.3))
         path.addLine(to: CGPoint(x: w * 0.3, y: h * 0.6))
         path.addLine(to: CGPoint(x: w * 0.3, y: h * 0.4))
+        path.closeSubpath()
 
         
         //
