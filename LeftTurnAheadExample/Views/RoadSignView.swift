@@ -15,23 +15,29 @@ struct RoadSignView: View {
                 .fill(Color.yellow)
                 .aspectRatio(1.0, contentMode: .fit)
                 .overlay(
-                    DiamondShape()
-                        .stroke(Color.black, lineWidth: 10) // Black border
-                        .padding(20)
-                        .overlay {
-                            // Left-turn arrow
-                            LeftTurnArrowShape()
-                                .stroke(
-                                    .black,
-                                    style: StrokeStyle(
-                                        lineWidth: 8,
-                                        lineCap: .round,
-                                        lineJoin: .round
+                    GeometryReader { reader in
+                        DiamondShape()
+                            .stroke(Color.black, lineWidth: 10) // Black border
+                            .padding(20)
+                            .overlay {
+                                // Left-turn arrow
+                                LeftTurnArrowShape()
+                                    .stroke(
+                                        .black,
+                                        style: StrokeStyle(
+                                            lineWidth: 8,
+                                            lineCap: .round,
+                                            lineJoin: .round
+                                        )
                                     )
-                                )
-                                .fill(.black)
-                                .padding(125)
-                        }
+                                    .frame(
+                                        width: reader.size.width * 0.45,
+                                        height: reader.size.width * 0.45
+                                    )
+                                    .offset(x: reader.size.width * -0.05)
+                                    .padding(125)
+                            }
+                    }
                 )
                 
             
