@@ -14,10 +14,6 @@ struct LeftTurnArrowShape: Shape {
         let h = rect.height
         
         // Start with a line for the arrow stem
-//        path.move(to: CGPoint(x: w * 0.9, y: h * 0.35))
-//        path.addLine(to: CGPoint(x: w * 0.9, y: h * 0.7))
-//        path.addLine(to: CGPoint(x: w * 0.8, y: h * 0.7))
-//        path.addLine(to: CGPoint(x: w * 0.8, y: h * 0.35))
         path.move(to: CGPoint(x: w * 0.8, y: h * 0.4))
         path.addLine(to: CGPoint(x: w * 0.8, y: h * 1.0))
         path.addLine(to: CGPoint(x: w * 1.0, y: h * 1.0))
@@ -32,27 +28,15 @@ struct LeftTurnArrowShape: Shape {
         
         // Continue left to arrowhead
         path.addLine(to: CGPoint(x: w * 0.3, y: h * 0.2))
+        
+        // Draw arrowhead
         path.addLine(to: CGPoint(x: w * 0.3, y: h * 0.0))
         path.addLine(to: CGPoint(x: w * 0.0, y: h * 0.3))
         path.addLine(to: CGPoint(x: w * 0.3, y: h * 0.6))
         path.addLine(to: CGPoint(x: w * 0.3, y: h * 0.4))
-        path.closeSubpath()
-
         
-        //
-////        // Add the left-turn hook
-//        path.addArc(center: CGPoint(x: w * 0.8, y: h * 0.7),
-//                    radius: w * 0.1,
-//                    startAngle: .degrees(0),
-//                    endAngle: .degrees(180),
-//                    clockwise: false)
-
-
-//
-//        // Add arrowhead
-//        path.addLine(to: CGPoint(x: w * 0.3, y: h * 0.5))
-//        path.move(to: CGPoint(x: w * 0.5, y: h * 0.7))
-//        path.addLine(to: CGPoint(x: w * 0.3, y: h * 0.9))
+        // Finish up the shape
+        path.closeSubpath()
         
         return path
     }
