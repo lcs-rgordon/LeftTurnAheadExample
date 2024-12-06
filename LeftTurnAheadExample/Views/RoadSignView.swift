@@ -29,6 +29,7 @@ struct RoadSignView: View {
                         lineJoin: .round
                     )
                 )
+                .fill(.black)
                 .frame(width: 100, height: 100)
         }
     }
