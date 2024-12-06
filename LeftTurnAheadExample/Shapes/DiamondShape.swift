@@ -25,4 +25,5 @@ struct DiamondShape: Shape {
 
 #Preview {
     DiamondShape()
+        .aspectRatio(1.0, contentMode: .fit)
 }
