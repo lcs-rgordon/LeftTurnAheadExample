@@ -13,24 +13,28 @@ struct RoadSignView: View {
             // Diamond background
             DiamondShape()
                 .fill(Color.yellow)
-                .frame(width: 200, height: 200)
+                .aspectRatio(1.0, contentMode: .fit)
                 .overlay(
                     DiamondShape()
-                        .stroke(Color.black, lineWidth: 4) // Black border
+                        .stroke(Color.black, lineWidth: 10) // Black border
+                        .padding(20)
+                        .overlay {
+                            // Left-turn arrow
+                            LeftTurnArrowShape()
+                                .stroke(
+                                    .black,
+                                    style: StrokeStyle(
+                                        lineWidth: 8,
+                                        lineCap: .round,
+                                        lineJoin: .round
+                                    )
+                                )
+                                .fill(.black)
+                                .padding(125)
+                        }
                 )
+                
             
-            // Left-turn arrow
-            LeftTurnArrowShape()
-                .stroke(
-                    .black,
-                    style: StrokeStyle(
-                        lineWidth: 8,
-                        lineCap: .round,
-                        lineJoin: .round
-                    )
-                )
-                .fill(.black)
-                .frame(width: 100, height: 100)
         }
     }
 }
