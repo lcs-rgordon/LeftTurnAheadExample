@@ -13,25 +13,25 @@ struct DiamondShape: Shape {
         let w = rect.width
         let h = rect.height
 
-        path.move(to: CGPoint(x: w * 0.4, y: h * 0.1)) // Top point
-        path.addLine(to: CGPoint(x: w * 0.4, y: h * 0.1)) // Top
+        path.move(to: CGPoint(x: w * 0.45, y: h * 0.05)) // Top point
+        path.addLine(to: CGPoint(x: w * 0.45, y: h * 0.05)) // Top
         path.addQuadCurve(
-            to: CGPoint(x: w * 0.6, y: h * 0.1),
+            to: CGPoint(x: w * 0.55, y: h * 0.05),
             control: CGPoint(x: w * 0.5, y: h * 0.0)    // Control point at apex of curve
         )
-        path.addLine(to: CGPoint(x: w * 0.9, y: h * 0.4)) // Right
+        path.addLine(to: CGPoint(x: w * 0.95, y: h * 0.45)) // Right
         path.addQuadCurve(
-            to: CGPoint(x: w * 0.9, y: h * 0.6),
+            to: CGPoint(x: w * 0.95, y: h * 0.55),
             control: CGPoint(x: w * 1.0, y: h * 0.5)    // Control point at apex of curve
         )
-        path.addLine(to: CGPoint(x: w * 0.6, y: h * 0.9)) // Bottom
+        path.addLine(to: CGPoint(x: w * 0.55, y: h * 0.95)) // Bottom
         path.addQuadCurve(
-            to: CGPoint(x: w * 0.4, y: h * 0.9),
+            to: CGPoint(x: w * 0.45, y: h * 0.95),
             control: CGPoint(x: w * 0.5, y: h * 1.0)    // Control point at apex of curve
         )
-        path.addLine(to: CGPoint(x: w * 0.1, y: h * 0.6)) // Left
+        path.addLine(to: CGPoint(x: w * 0.05, y: h * 0.55)) // Left
         path.addQuadCurve(
-            to: CGPoint(x: w * 0.1, y: h * 0.4),
+            to: CGPoint(x: w * 0.05, y: h * 0.45),
             control: CGPoint(x: w * 0.0, y: h * 0.5)    // Control point at apex of curve
         )
         path.closeSubpath()
