@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct DiamondShape: Shape {
+struct Diamond: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
         let w = rect.width
@@ -41,12 +41,12 @@ struct DiamondShape: Shape {
 }
 
 #Preview {
-    RoadSignView(content: LeftTurnArrowShape())
+    RoadSignView(signToShow: LeftTurnAhead())
 }
 
 #Preview {
     VStack {
-        DiamondShape()
+        Diamond()
             .aspectRatio(1.0, contentMode: .fit)
         Spacer()
     }

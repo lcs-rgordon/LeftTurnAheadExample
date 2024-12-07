@@ -9,11 +9,12 @@ import SwiftUI
 
 struct RoadSignView<Content: Shape>: View {
     
-    let content: Content
+    let shape: Content
+    let scale: Double
     
     var body: some View {
         GeometryReader { reader in
-            DiamondShape()
+            Diamond()
                 .stroke(
                     .yellow,
                     style: StrokeStyle(
@@ -26,7 +27,7 @@ struct RoadSignView<Content: Shape>: View {
                 .aspectRatio(1.0, contentMode: .fit)
                 .overlay(
                     GeometryReader { innerReader in
-                        DiamondShape()
+                        Diamond()
                             .stroke(
                                 .black,
                                 style: StrokeStyle(
@@ -38,7 +39,7 @@ struct RoadSignView<Content: Shape>: View {
                             .padding(innerReader.size.width * 0.02)
                             .overlay {
                                 // Left-turn arrow
-                                content
+                                shape
                                     .stroke(
                                         .black,
                                         style: StrokeStyle(
@@ -49,8 +50,8 @@ struct RoadSignView<Content: Shape>: View {
                                     )
                                     .fill(.black)
                                     .frame(
-                                        width: innerReader.size.width * 0.4,
-                                        height: innerReader.size.width * 0.4
+                                        width: innerReader.size.width * scale,
+                                        height: innerReader.size.width * scale
                                     )
                                     .offset(x: innerReader.size.width * -0.05)
                             }
@@ -58,10 +59,15 @@ struct RoadSignView<Content: Shape>: View {
                 )
             
         }
-//        .padding()
+
+    }
+    
+    init(signToShow: Content, scale: Double = 0.4) {
+        self.shape = signToShow
+        self.scale = scale
     }
 }
 
 #Preview {
-    RoadSignView(content: LeftTurnArrowShape())
+    RoadSignView(signToShow: LeftTurnAhead())
 }

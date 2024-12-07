@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LeftTurnArrowShape: Shape {
+struct LeftTurnAhead: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
         let w = rect.width
@@ -43,7 +43,7 @@ struct LeftTurnArrowShape: Shape {
 }
 
 #Preview {
-    LeftTurnArrowShape()
+    LeftTurnAhead()
         .border(.red)
         .aspectRatio(1.0, contentMode: .fit)
 }
