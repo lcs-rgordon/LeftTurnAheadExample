@@ -10,34 +10,21 @@ import SwiftUI
 struct DiamondShape: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
-        let w = rect.width
-        let h = rect.height
+        let width = rect.width
+        let height = rect.height
 
-        path.move(to: CGPoint(x: w * 0.4, y: h * 0.1)) // Top point
-        path.addLine(to: CGPoint(x: w * 0.4, y: h * 0.1)) // Top
-        path.addQuadCurve(
-            to: CGPoint(x: w * 0.6, y: h * 0.1),
-            control: CGPoint(x: w * 0.5, y: h * 0.0)    // Control point at apex of curve
-        )
-        path.addLine(to: CGPoint(x: w * 0.9, y: h * 0.4)) // Right
-        path.addQuadCurve(
-            to: CGPoint(x: w * 0.9, y: h * 0.6),
-            control: CGPoint(x: w * 1.0, y: h * 0.5)    // Control point at apex of curve
-        )
-        path.addLine(to: CGPoint(x: w * 0.6, y: h * 0.9)) // Bottom
-        path.addQuadCurve(
-            to: CGPoint(x: w * 0.4, y: h * 0.9),
-            control: CGPoint(x: w * 0.5, y: h * 1.0)    // Control point at apex of curve
-        )
-        path.addLine(to: CGPoint(x: w * 0.1, y: h * 0.6)) // Left
-        path.addQuadCurve(
-            to: CGPoint(x: w * 0.1, y: h * 0.4),
-            control: CGPoint(x: w * 0.0, y: h * 0.5)    // Control point at apex of curve
-        )
+        path.move(to: CGPoint(x: width / 2, y: 0)) // Top point
+        path.addLine(to: CGPoint(x: width, y: height / 2)) // Right point
+        path.addLine(to: CGPoint(x: width / 2, y: height)) // Bottom point
+        path.addLine(to: CGPoint(x: 0, y: height / 2)) // Left point
         path.closeSubpath()
 
         return path
     }
+}
+
+#Preview {
+    RoadSignView()
 }
 
 #Preview {

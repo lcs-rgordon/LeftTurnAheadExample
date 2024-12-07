@@ -9,11 +9,19 @@ import SwiftUI
 
 struct RoadSignView: View {
     var body: some View {
-        DiamondShape()
-            .fill(Color.yellow)
-            .aspectRatio(1.0, contentMode: .fit)
-            .overlay(
-                GeometryReader { reader in
+        GeometryReader { reader in
+            DiamondShape()
+                .stroke(
+                    .yellow,
+                    style: StrokeStyle(
+                        lineWidth: reader.size.width * 0.02,
+                        lineCap: .round,
+                        lineJoin: .round
+                    )
+                )
+                .fill(Color.yellow)
+                .aspectRatio(1.0, contentMode: .fit)
+                .overlay(
                     DiamondShape()
                         .stroke(
                             .black,
@@ -23,7 +31,7 @@ struct RoadSignView: View {
                                 lineJoin: .round
                             )
                         )
-                        .padding(reader.size.width * 0.04)
+                        .padding(reader.size.width * 0.02)
                         .overlay {
                             // Left-turn arrow
                             LeftTurnArrowShape()
@@ -42,8 +50,10 @@ struct RoadSignView: View {
                                 )
                                 .offset(x: reader.size.width * -0.05)
                         }
-                }
-            )
+                )
+            
+        }
+        .padding()
     }
 }
 
