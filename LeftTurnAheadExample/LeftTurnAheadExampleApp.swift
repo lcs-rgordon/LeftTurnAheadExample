@@ -11,7 +11,7 @@ import SwiftUI
 struct LeftTurnAheadExampleApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ManyRoadSigns()
         }
     }
 }
