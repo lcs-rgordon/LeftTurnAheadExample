@@ -7,7 +7,10 @@
 
 import SwiftUI
 
-struct RoadSignView: View {
+struct RoadSignView<Content: Shape>: View {
+    
+    let content: Content
+    
     var body: some View {
         GeometryReader { reader in
             DiamondShape()
@@ -35,7 +38,7 @@ struct RoadSignView: View {
                             .padding(innerReader.size.width * 0.02)
                             .overlay {
                                 // Left-turn arrow
-                                LeftTurnArrowShape()
+                                content
                                     .stroke(
                                         .black,
                                         style: StrokeStyle(
@@ -60,5 +63,5 @@ struct RoadSignView: View {
 }
 
 #Preview {
-    RoadSignView()
+    RoadSignView(content: LeftTurnArrowShape())
 }

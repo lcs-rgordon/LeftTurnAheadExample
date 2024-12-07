@@ -41,7 +41,7 @@ struct DiamondShape: Shape {
 }
 
 #Preview {
-    RoadSignView()
+    RoadSignView(content: LeftTurnArrowShape())
 }
 
 #Preview {

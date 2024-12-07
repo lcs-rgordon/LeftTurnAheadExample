@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81BF22DD2D04FDFA00211A88 /* RightTurnAhead.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81BF22DC2D04FDFA00211A88 /* RightTurnAhead.swift */; };
 		81F53E3E2D037FB7004B9CC2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81F53E382D037FB7004B9CC2 /* Preview Assets.xcassets */; };
 		81F53E3F2D037FB7004B9CC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81F53E3A2D037FB7004B9CC2 /* Assets.xcassets */; };
 		81F53E402D037FB7004B9CC2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F53E3B2D037FB7004B9CC2 /* ContentView.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81BF22DC2D04FDFA00211A88 /* RightTurnAhead.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightTurnAhead.swift; sourceTree = "<group>"; };
 		81F53E1D2D037FA2004B9CC2 /* LeftTurnAheadExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeftTurnAheadExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81F53E382D037FB7004B9CC2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		81F53E3A2D037FB7004B9CC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		81F53E422D037FB9004B9CC2 /* Shapes */ = {
 			isa = PBXGroup;
 			children = (
+				81BF22DC2D04FDFA00211A88 /* RightTurnAhead.swift */,
 				81F53E452D037FCE004B9CC2 /* LeftTurnArrowShape.swift */,
 				81F53E432D037FC1004B9CC2 /* DiamondShape.swift */,
 			);
@@ -173,6 +176,7 @@
 				81F53E442D037FC5004B9CC2 /* DiamondShape.swift in Sources */,
 				81F53E402D037FB7004B9CC2 /* ContentView.swift in Sources */,
 				81F53E412D037FB7004B9CC2 /* LeftTurnAheadExampleApp.swift in Sources */,
+				81BF22DD2D04FDFA00211A88 /* RightTurnAhead.swift in Sources */,
 				81F53E462D037FD3004B9CC2 /* LeftTurnArrowShape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

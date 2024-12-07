@@ -10,16 +10,16 @@ import SwiftUI
 struct ManyRoadSigns: View {
     var body: some View {
         HStack {
-            RoadSignView()
+            RoadSignView(content: LeftTurnArrowShape())
             VStack {
-                RoadSignView()
-                RoadSignView()
-                RoadSignView()
-                RoadSignView()
-                RoadSignView()
-                RoadSignView()
-                RoadSignView()
-                RoadSignView()
+                RoadSignView(content: LeftTurnArrowShape())
+                RoadSignView(content: LeftTurnArrowShape())
+                RoadSignView(content: LeftTurnArrowShape())
+                RoadSignView(content: LeftTurnArrowShape())
+                RoadSignView(content: LeftTurnArrowShape())
+                RoadSignView(content: LeftTurnArrowShape())
+                RoadSignView(content: LeftTurnArrowShape())
+                RoadSignView(content: LeftTurnArrowShape())
             }
         }
     }
