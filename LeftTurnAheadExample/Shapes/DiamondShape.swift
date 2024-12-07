@@ -10,13 +10,18 @@ import SwiftUI
 struct DiamondShape: Shape {
     func path(in rect: CGRect) -> Path {
         var path = Path()
-        let width = rect.width
-        let height = rect.height
+        let w = rect.width
+        let h = rect.height
 
-        path.move(to: CGPoint(x: width / 2, y: 0)) // Top point
-        path.addLine(to: CGPoint(x: width, y: height / 2)) // Right point
-        path.addLine(to: CGPoint(x: width / 2, y: height)) // Bottom point
-        path.addLine(to: CGPoint(x: 0, y: height / 2)) // Left point
+        path.move(to: CGPoint(x: w * 0.4, y: h * 0.1)) // Top point
+        path.addLine(to: CGPoint(x: w * 0.4, y: h * 0.1)) // Top
+        path.addLine(to: CGPoint(x: w * 0.6, y: h * 0.1)) // Top
+        path.addLine(to: CGPoint(x: w * 0.9, y: h * 0.4)) // Right
+        path.addLine(to: CGPoint(x: w * 0.9, y: h * 0.6)) // Right
+        path.addLine(to: CGPoint(x: w * 0.6, y: h * 0.9)) // Bottom
+        path.addLine(to: CGPoint(x: w * 0.4, y: h * 0.9)) // Bottom
+        path.addLine(to: CGPoint(x: w * 0.1, y: h * 0.6)) // Left
+        path.addLine(to: CGPoint(x: w * 0.1, y: h * 0.4)) // Left
         path.closeSubpath()
 
         return path
