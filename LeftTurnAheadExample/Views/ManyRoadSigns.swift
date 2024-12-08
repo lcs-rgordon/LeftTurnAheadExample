@@ -10,10 +10,10 @@ import SwiftUI
 struct ManyRoadSigns: View {
     var body: some View {
         HStack {
-            RoadSignView(scale: 0.5) {
+            RoadSign(scale: 0.5) {
                 SideRoadLeft()
             }
-            RoadSignView {
+            RoadSign {
                 LeftTurnAhead()
             }
         }

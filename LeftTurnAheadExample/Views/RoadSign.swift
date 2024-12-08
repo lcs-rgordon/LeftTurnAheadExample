@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RoadSignView<Content: Shape>: View {
+struct RoadSign<Content: Shape>: View {
     
     let scale: Double
     let shape: () -> Content
@@ -69,7 +69,7 @@ struct RoadSignView<Content: Shape>: View {
 }
 
 #Preview {
-    RoadSignView {
+    RoadSign {
         LeftTurnAhead()
     }
 }
