@@ -9,8 +9,8 @@ import SwiftUI
 
 struct RoadSignView<Content: Shape>: View {
     
-    let shape: Content
     let scale: Double
+    let shape: () -> Content
     
     var body: some View {
         GeometryReader { reader in
@@ -39,7 +39,7 @@ struct RoadSignView<Content: Shape>: View {
                             .padding(innerReader.size.width * 0.02)
                             .overlay {
                                 // Left-turn arrow
-                                shape
+                                shape()
                                     .stroke(
                                         .black,
                                         style: StrokeStyle(
@@ -62,12 +62,14 @@ struct RoadSignView<Content: Shape>: View {
 
     }
     
-    init(signToShow: Content, scale: Double = 0.4) {
-        self.shape = signToShow
+    init(scale: Double = 0.4, signToShow: @escaping () -> Content) {
         self.scale = scale
+        self.shape = signToShow
     }
 }
 
 #Preview {
-    RoadSignView(signToShow: LeftTurnAhead())
+    RoadSignView {
+        LeftTurnAhead()
+    }
 }

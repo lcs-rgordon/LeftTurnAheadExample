@@ -41,7 +41,9 @@ struct Diamond: Shape {
 }
 
 #Preview {
-    RoadSignView(signToShow: LeftTurnAhead())
+    RoadSignView {
+        SideRoadLeft()
+    }
 }
 
 #Preview {

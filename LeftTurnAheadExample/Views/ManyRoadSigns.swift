@@ -9,13 +9,13 @@ import SwiftUI
 
 struct ManyRoadSigns: View {
     var body: some View {
-        VStack {
-            RoadSignView(
-                signToShow: SideRoadLeft(),
-                scale: 0.5
-            )
-            RoadSignView(signToShow: LeftTurnAhead())
-            RoadSignView(signToShow: LeftTurnAhead())
+        HStack {
+            RoadSignView(scale: 0.5) {
+                SideRoadLeft()
+            }
+            RoadSignView {
+                LeftTurnAhead()
+            }
         }
     }
 }
